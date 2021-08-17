@@ -36,7 +36,7 @@ module.exports = function (req, res, url) {
 				res.end();
 			});
 			return true;
-		case "/goapi/saveSound/":
+                       // was removed cuz it sucks ass
 			loadPost(req, res).then(([data, mId]) => {
 				var bytes = Buffer.from(data.bytes, "base64");
 				asset.save(bytes, mId, "voiceover", "ogg");
